@@ -1,5 +1,3 @@
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.Scanner;
 
 public class GraphInfo {
@@ -80,19 +78,11 @@ public class GraphInfo {
     public Graph CreatGraph(){
         Graph graph = new Graph();
         Scanner scan=new Scanner(System.in);
-        //System.out.println("请输入顶点数：(顶点数为2的倍数)");
         graph.verNum=10;
         int num = graph.verNum;
-//        while (num %2 != 0){
-//            System.out.println("请重新输入顶点数：(顶点数为2的倍数)");
-//            graph.verNum=scan.nextInt();
-//            num = graph.verNum;
-//        }
-
         for(int i = 1 ; i <=graph.verNum ; i ++){
             if(i%2 == 1){
                 Place place = new Place(i/2+1,(int)(Math.random()*5)+1);
-                //place.nextNode = null;
                 graph.placeArray[(i-1)/2] = place;
                 graph.placeNum++;
             }
